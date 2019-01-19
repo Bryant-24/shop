@@ -1,0 +1,10 @@
+<ul>
+  <li>Название: {{ product.name }}</li>
+  <li>Описание: {{ product.description}}</li>
+  <li>Цена: {{ product.price }} руб.</li>
+  <li>Доступно: {{ product.isAvailable ? 'Да' : 'Нет' }}</li>
+  <li>Цвет: {{ product.color }}</li>
+  <li>Размер: {{ product.size }}</li>
+</ul>
+
+<button (click)="onBuy($event)">Buy</button>

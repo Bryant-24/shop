@@ -1,0 +1,11 @@
+<h2>В корзине:</h2>
+
+<ul *ngIf="cart.length; else elseBlock">
+  <li *ngFor="let product of cart">
+    <app-product [product]="product"></app-product>
+  </li>
+</ul>
+
+<ng-template #elseBlock>
+  Ваша корзина пуста!
+</ng-template>
