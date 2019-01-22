@@ -13,14 +13,14 @@ export class AppComponent implements OnInit {
   products: Array<Product>;
   cart: Array<Product>;
 
-  constructor(private ProductService: ProductService, private CartService: CartService) {}
+  constructor(private productService: ProductService, private cartService: CartService) {}
 
   ngOnInit() {
-    this.products = this.ProductService.getProducts();
+    this.products = this.productService.getProducts();
     this.cart = [];
   }
 
   onBuy(product: Product): void {
-    this.CartService.addProductToCart(this.cart, product);
+    this.cartService.addProductToCart(this.cart, product);
   }
 }
