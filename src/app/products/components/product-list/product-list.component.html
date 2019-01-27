@@ -1,0 +1,7 @@
+<h2>В продаже:</h2>
+
+<ul>
+  <li *ngFor="let product of products">
+    <app-product [product]="product" (bought)="onBuy($event)"></app-product>
+  </li>
+</ul>
